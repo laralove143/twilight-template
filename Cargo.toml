@@ -1,0 +1,79 @@
+[package]
+#name = "{{project-name}}"
+name = "template"
+version = "0.1.0"
+authors = ["{{authors}}"]
+license = "MIT"
+edition = "2021"
+
+[dependencies]
+# default features are uncommented
+twilight-gateway = { version = "0.10", default-features = false, features = [
+#   "simd-json",
+    "rustls-native-roots",
+#   "native",
+#   "rustls-webpki-roots",
+    "zlib-stock",
+#   "zlib-simd",
+    "tracing",
+#   "metrics",
+] }
+twilight-http = { version = "0.10", default-features = false, features = [
+    "decompression",
+#   "simd-json",
+    "rustls-native-roots",
+#   "native",
+#   "rustls-webpki-roots",
+    "tracing",
+#   "trust-dns",
+] }
+twilight-model = { version = "0.10", default-features = false, features = [
+    "tracing"
+] }
+
+# twilight-cache-inmemory = { version = "0.10", default-features = false, features = [
+#    not enabled by default:
+#    "permission-calculator"
+#] }
+
+# twilight-util = { version = "0.10", default-features = false, features = [
+#    not enabled by default:
+#    "builder",
+#    "link",
+#    "permission-calculator",
+#    "snowflake",
+#] }
+
+# twilight-standby = { version = "0.10", default-features = false, features = [
+#     enabled by default:
+#     "tracing"
+# ] }
+
+# twilight-gateway-queue = { version = "0.10", default-features = false, features = [
+#     enabled by default:
+#     "twilight-http",
+#     "tracing",
+# ] }
+
+# twilight_http_ratelimiting = { version = "0.10", default-features = false, features = [
+#     enabled by default:
+#     "tracing",
+# ] }
+
+# twilight_lavalink = { version = "0.10", default-features = false, features = [
+#     enabled by default:
+#     "http-support",
+#     "rustls-native-roots",
+#     "tracing",
+#     other features
+#     "native",
+#     "rustls-webpki-roots",
+# ] }
+
+# no features
+# twilight-mention = "0.10"
+# twilight-validate = "0.10"
+
+tokio = { version = "1.17.0", default-features = false, features = ["rt-multi-thread", "macros"] }
+futures-util = "0.3.21"
+anyhow = "1.0"
